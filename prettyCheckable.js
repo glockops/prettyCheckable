@@ -107,11 +107,15 @@
       if (labelPosition === 'labelright') {
 
         dom.push('<a href="#" class="' + isChecked + '"></a>');
-        dom.push('<label for="' + el.attr('id') + '">' + label + '</label>');
+        if(label) {
+            dom.push('<label for="' + el.attr('id') + '">' + label + '</label>');
+        }
 
       } else {
 
-        dom.push('<label for="' + el.attr('id') + '">' + label + '</label>');
+        if(label) {
+            dom.push('<label for="' + el.attr('id') + '">' + label + '</label>');
+        }
         dom.push('<a href="#" class="' + isChecked + '"></a>');
 
       }
